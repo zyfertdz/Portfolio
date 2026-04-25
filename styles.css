@@ -38,6 +38,12 @@ p {
     text-decoration: none;
 }
 
+.portfolio a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+}
+
 .footer {
     color: #666;
 }
