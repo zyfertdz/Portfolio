@@ -1,0 +1,55 @@
+body {
+    font-family: "elza-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 200%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.grid-item {
+    padding: 1rem;
+    border: none;
+    box-sizing: border-box;
+}
+
+.social-media a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+}
+
+.footer {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px; 
+    }
+
+    .grid-item {
+        padding: 10px; 
+    }
+}
