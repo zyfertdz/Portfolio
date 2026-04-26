@@ -36,26 +36,46 @@ p {
     display: block;
     color: #666;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+    color: #000;
 }
 
 .portfolio a {
     display: block;
     color: #666;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.portfolio a:hover {
+    color: #000;
 }
 
 .footer {
     color: #666;
 }
 
+/* Tablet */
 @media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+    }
+}
+
+/* Phone */
+@media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 10px; 
+        height: auto;
     }
 
     .grid-item {
-        padding: 10px; 
+        padding: 0.75rem;
     }
 }
