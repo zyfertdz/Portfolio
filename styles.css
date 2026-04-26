@@ -17,39 +17,31 @@ p {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
     gap: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    border: none;
+    box-sizing: border-box;
 }
 
 .grid-item {
     padding: 1rem;
-    border: none;
     box-sizing: border-box;
 }
 
-.social-media a {
-    display: block;
-    color: #666;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.social-media a:hover {
-    color: #000;
-}
-
+.contact-info a,
+.social-media a,
 .portfolio a {
     display: block;
+    width: fit-content;
     color: #666;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
+.contact-info a:hover,
+.social-media a:hover,
 .portfolio a:hover {
     color: #000;
 }
@@ -58,21 +50,21 @@ p {
     color: #666;
 }
 
-/* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        height: auto;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Phone */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: auto;
     }
 
     .grid-item {
