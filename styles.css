@@ -1,32 +1,49 @@
+@font-face {
+    font-family: AlteHaasGrotesk;
+    src: url(AlteHaasGroteskRegular.woff2);
+}
+
 body {
-    font-family: "elza-text", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
+    font-family: AlteHaasGrotesk, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    font-size: 16px;
+    line-height: 160%;
+    margin: 0;
+    padding: 0;
 }
 
 p {
     margin: 0;
-    padding: 0;
-    line-height: 200%;
+}
+
+h1 {
+    font-size: 52px;
+    line-height: 1;
+    margin: 0;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 0.1em 0;
+    line-height: 160%;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    width: 100vw;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+.grid-header {
+    grid-column: 1 / -1;
 }
 
 .grid-item {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     box-sizing: border-box;
 }
 
@@ -54,20 +71,24 @@ p {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .grid-header {
+        padding-bottom: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .grid-header {
+        padding-bottom: 2.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr;
-    }
-
-    .grid-item {
-        padding: 0.75rem;
     }
 }
